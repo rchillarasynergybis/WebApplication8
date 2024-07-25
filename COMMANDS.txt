@@ -1,0 +1,1 @@
+ MSBuild .\WebApplication8.sln /t:ContainerBuild /p:Configuration=Release
