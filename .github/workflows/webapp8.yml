@@ -45,6 +45,7 @@ jobs:
         run: |
           docker login -u rchillarasynergybis -p {{secrets.WEBAPP8_SECRET}} ghcr.io
           MSBuild .\WebApplication8.sln /t:ContainerBuild /p:Configuration=Release
+          docker tag webapplication8:latest ghcr.io/rchillarasynergybis/webapplication8:latest
           docker push ghcr.io/rchillarasynergybis/webapplication8:latest
 
 
